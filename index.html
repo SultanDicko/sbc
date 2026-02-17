@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBC - Sahel Business Center | Froid, Climatisation & Électricité</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Icônes -->
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sbc: {
+                            orange: '#E65100', // Orange du logo
+                            black: '#121212',  // Noir profond technique
+                            grey: '#F8F9FA',   // Fond gris très clair
+                            accent: '#FF8F00'  // Accentuation au survol
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .service-card, .product-card {
+            transition: all 0.3s ease-in-out;
+        }
+        .service-card:hover, .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card:hover .icon-box {
+            background-color: #E65100;
+            color: white;
+            transform: scale(1.1) rotate(5deg);
+        }
+        .header-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .bg-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+        }
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-white text-sbc-black font-sans leading-relaxed">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 top-0 header-glass border-b border-gray-100">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <img src="logo.jpeg" onerror="this.src='https://placehold.co/100x100/E65100/white?text=SBC'" alt="Logo SBC" class="h-12 w-auto">
+                <div class="hidden sm:block">
+                    <span class="block font-display font-bold text-xl leading-none">SAHEL BUSINESS CENTER</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-sbc-orange font-bold">Expertise & Performance</span>
+                </div>
+            </a>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden lg:flex items-center gap-8 font-semibold text-sm uppercase tracking-wider">
+                <a href="#accueil" class="hover:text-sbc-orange transition">Accueil</a>
+                <a href="#propos" class="hover:text-sbc-orange transition">À Propos</a>
+                <a href="#services" class="hover:text-sbc-orange transition">Services</a>
+                <a href="#boutique" class="hover:text-sbc-orange transition">Boutique</a>
+                <a href="https://wa.me/22670195701" target="_blank" class="bg-sbc-orange text-white px-6 py-2 rounded-lg hover:bg-sbc-black transition shadow-lg shadow-orange-900/20">Contact</a>
+            </div>
+
+            <!-- Bouton Mobile -->
+            <button id="mobile-btn" class="lg:hidden text-3xl text-sbc-black p-2">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl overflow-hidden">
+            <div class="flex flex-col p-6 gap-6 font-bold text-lg text-center">
+                <a href="#accueil" class="hover:text-sbc-orange">Accueil</a>
+                <a href="#propos" class="hover:text-sbc-orange">À Propos</a>
+                <a href="#services" class="hover:text-sbc-orange">Nos Services</a>
+                <a href="#boutique" class="hover:text-sbc-orange">Boutique</a>
+                <a href="https://wa.me/22670195701" target="_blank" class="text-sbc-orange">Nous Contacter</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION HERO -->
+    <section id="accueil" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-pattern">
+        <div class="absolute inset-0 bg-gradient-to-r from-sbc-black via-sbc-black/70 to-transparent z-10"></div>
+        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?q=80&w=2070&auto=format&fit=crop" alt="Ingénierie technique" class="absolute inset-0 w-full h-full object-cover">
+        
+        <div class="container mx-auto px-6 relative z-20">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 bg-sbc-orange/20 border border-sbc-orange/30 text-sbc-orange px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-sm">
+                    <i class="ph-fill ph-check-circle"></i> Service Professionnel Certifié
+                </div>
+                <h1 class="font-display text-5xl md:text-7xl font-bold text-white leading-tight mb-8">
+                    Qualité, Expertise & <span class="text-sbc-orange">Pièces d'Origine</span>.
+                </h1>
+                <p class="text-gray-300 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl font-light">
+                    SBC - Sahel Business Center. Votre partenaire de confiance pour la climatisation et l'électricité. Découvrez aussi notre boutique de composants professionnels.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#boutique" class="bg-sbc-orange text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-sbc-orange transition-all duration-300 flex items-center gap-2">
+                        Visiter la boutique <i class="ph ph-shopping-cart"></i>
+                    </a>
+                    <a href="https://wa.me/22670195701" target="_blank" class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300">
+                        Urgence Dépannage
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION SERVICES -->
+    <section id="services" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 uppercase">Nos Expertises</h2>
+                <div class="w-24 h-1.5 bg-sbc-orange mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div class="service-card bg-sbc-grey p-8 md:p-12 rounded-[40px] shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8">
+                    <div class="icon-box w-20 h-20 bg-white rounded-2xl flex items-center justify-center text-sbc-orange shrink-0 shadow-inner">
+                        <i class="ph ph-thermometer-cold text-4xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display text-2xl font-bold mb-4">Froid & Climatisation</h3>
+                        <ul class="space-y-4 text-gray-600 mb-8">
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-caret-right text-sbc-orange"></i> Installation Split, Armoire, VRV</li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-caret-right text-sbc-orange"></i> Chambres froides & Froid industriel</li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-caret-right text-sbc-orange"></i> Maintenance préventive & Dépannage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card bg-sbc-black p-8 md:p-12 rounded-[40px] shadow-xl flex flex-col md:flex-row gap-8 text-white">
+                    <div class="icon-box w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center text-sbc-orange shrink-0 shadow-inner border border-white/5">
+                        <i class="ph ph-lightning text-4xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display text-2xl font-bold mb-4">Électricité Générale</h3>
+                        <ul class="space-y-4 text-gray-400 mb-8">
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-caret-right text-sbc-orange"></i> Installation bâtiment & Tertiaire</li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-caret-right text-sbc-orange"></i> Câblage & Tableaux électriques</li>
+                            <li class="flex items-center gap-3"><i class="ph-bold ph-caret-right text-sbc-orange"></i> Éclairage & Maintenance électrique</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION BOUTIQUE -->
+    <section id="boutique" class="py-24 bg-sbc-grey">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 uppercase">Boutique <span class="text-sbc-orange">SBC</span></h2>
+                    <p class="text-gray-500 max-w-xl">Pièces détachées d'origine et consommables de haute qualité pour vos équipements de froid et climatisation.</p>
+                </div>
+                <a href="#contact" class="text-sbc-orange font-bold flex items-center gap-2 hover:underline">
+                    Liste complète sur demande <i class="ph ph-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Produit 1 -->
+                <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
+                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50">
+                        <img src="Gaz R 32.jpeg" alt="Gaz R32" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-2">Bouteille de Gaz R32</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex-grow">Réfrigérant haute performance écologique pour nouveaux systèmes de clim.</p>
+                    <button onclick="orderProduct('Gaz R32')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition flex items-center justify-center gap-2">
+                        Commander via WhatsApp
+                    </button>
+                </div>
+
+                <!-- Produit 2 -->
+                <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
+                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50">
+                        <img src="Gaz R 410.jpeg" alt="Gaz R410" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-2">Bouteille de Gaz R410A</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex-grow">Gaz réfrigérant standard pour climatiseurs résidentiels et tertiaires.</p>
+                    <button onclick="orderProduct('Gaz R410A')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition flex items-center justify-center gap-2">
+                        Commander via WhatsApp
+                    </button>
+                </div>
+
+                <!-- Produit 3 -->
+                <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
+                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50">
+                        <img src="Compresseur.jpeg" alt="Compresseur" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-2">Compresseurs Rotatifs</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex-grow">Pièces de rechange robustes pour unités extérieures toutes marques.</p>
+                    <button onclick="orderProduct('Compresseur')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition flex items-center justify-center gap-2">
+                        Commander via WhatsApp
+                    </button>
+                </div>
+
+                <!-- Produit 4 -->
+                <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
+                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50">
+                        <img src="Kit professionnel pour entretien de climatiseur.jpeg" alt="Kit Entretien" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-2">Kit d'Entretien Pro</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex-grow">Équipement complet pour le nettoyage des évaporateurs.</p>
+                    <button onclick="orderProduct('Kit Entretien')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition flex items-center justify-center gap-2">
+                        Commander via WhatsApp
+                    </button>
+                </div>
+
+                <!-- Produit 5 -->
+                <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
+                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50">
+                        <img src="Détergeant Wigam.jpeg" alt="Coil Cleaner" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-2">Nettoyant Wigam Coil-Cleaner</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex-grow">Solution dégraissante professionnelle pour batteries et évaporateurs.</p>
+                    <button onclick="orderProduct('Détergeant Wigam')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition flex items-center justify-center gap-2">
+                        Commander via WhatsApp
+                    </button>
+                </div>
+
+                <!-- Produit 6 -->
+                <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
+                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50">
+                        <img src="Capacitor.jpeg" alt="Capacitor" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-2">Condensateurs de Démarrage</h3>
+                    <p class="text-gray-500 text-sm mb-4 flex-grow">Condensateurs permanents CBB65 pour moteurs et compresseurs clim.</p>
+                    <button onclick="orderProduct('Condensateur')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition flex items-center justify-center gap-2">
+                        Commander via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CONTACT -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto bg-white rounded-[40px] shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-gray-100">
+                <div class="lg:w-2/5 bg-sbc-orange p-10 md:p-16 text-white flex flex-col justify-between">
+                    <div>
+                        <h2 class="font-display text-3xl font-bold mb-6 italic">Un besoin technique ?</h2>
+                        <p class="text-white/80 mb-12">Nos experts SBC sont disponibles pour toute installation, maintenance ou achat de pièces.</p>
+                        <div class="space-y-8">
+                            <div class="flex items-center gap-5">
+                                <a href="https://wa.me/22670195701" target="_blank" class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center shrink-0 hover:bg-white hover:text-sbc-orange transition duration-300"><i class="ph-fill ph-whatsapp-logo text-2xl"></i></a>
+                                <div><p class="text-[10px] uppercase font-bold opacity-70">WhatsApp</p><p class="font-bold">+226 70 19 57 01</p></div>
+                            </div>
+                            <div class="flex items-center gap-5">
+                                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center shrink-0"><i class="ph-fill ph-envelope text-2xl"></i></div>
+                                <div><p class="text-[10px] uppercase font-bold opacity-70">Email Pro</p><p class="font-bold">contact@sbc-expert.com</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-3/5 p-10 md:p-16">
+                    <form onsubmit="event.preventDefault(); orderProduct('Demande de contact général');" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div><label class="block text-xs font-bold uppercase text-gray-400 mb-2">Nom Complet</label><input type="text" id="contact-name" class="w-full bg-sbc-grey p-4 rounded-xl border border-transparent focus:border-sbc-orange outline-none transition" required></div>
+                            <div><label class="block text-xs font-bold uppercase text-gray-400 mb-2">Service</label>
+                                <select id="contact-service" class="w-full bg-sbc-grey p-4 rounded-xl border border-transparent focus:border-sbc-orange outline-none transition">
+                                    <option>Climatisation</option>
+                                    <option>Électricité</option>
+                                    <option>Achat Pièces (Boutique)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div><label class="block text-xs font-bold uppercase text-gray-400 mb-2">Votre Message</label><textarea id="contact-message" rows="5" class="w-full bg-sbc-grey p-4 rounded-xl border border-transparent focus:border-sbc-orange outline-none transition" required></textarea></div>
+                        <button type="submit" class="w-full bg-sbc-black text-white py-5 rounded-xl font-bold text-lg uppercase tracking-widest hover:bg-sbc-orange transition shadow-xl">Envoyer sur WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-sbc-black text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <img src="logo.jpeg" onerror="this.src='https://placehold.co/100x100/E65100/white?text=SBC'" alt="SBC" class="h-16 mx-auto mb-8 grayscale invert brightness-0">
+            <p class="text-gray-500 text-sm max-w-lg mx-auto mb-10 italic tracking-wide">
+                Sahel Business Center (SBC) - Spécialiste du froid, de la climatisation et de l’électricité au Burkina Faso.
+            </p>
+            <div class="flex flex-wrap justify-center gap-8 mb-12 text-gray-400 font-bold uppercase text-xs tracking-widest">
+                <a href="#accueil" class="hover:text-white transition">Accueil</a>
+                <a href="#propos" class="hover:text-white transition">À Propos</a>
+                <a href="#services" class="hover:text-white transition">Services</a>
+                <a href="#boutique" class="hover:text-white text-sbc-orange">Boutique</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
+            <div class="border-t border-white/5 pt-10 text-[10px] text-gray-600 uppercase tracking-[0.3em]">
+                &copy; 2026 Sahel Business Center. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Fonction pour commander un produit ou contacter via WhatsApp
+        function orderProduct(subject) {
+            const phoneNumber = "22670195701"; 
+            let message = "";
+            
+            if (subject === 'Demande de contact général') {
+                const name = document.getElementById('contact-name').value;
+                const service = document.getElementById('contact-service').value;
+                const userMsg = document.getElementById('contact-message').value;
+                message = `Bonjour SBC, je suis ${name}. Je vous contacte pour le service : ${service}.\nMessage : ${userMsg}`;
+            } else {
+                message = `Bonjour SBC, je suis intéressé par : ${subject}. Pouvez-vous me donner plus d'informations ?`;
+            }
+            
+            window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+
+</body>
+</html>
