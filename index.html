@@ -137,23 +137,45 @@
                 <div class="w-24 h-1.5 bg-sbc-orange mx-auto rounded-full"></div>
             </div>
 
-            <!-- OFFRE MAINTENANCE SPECIALE -->
-            <div class="max-w-4xl mx-auto mb-16 bg-gradient-to-r from-sbc-orange to-sbc-accent p-1 rounded-3xl shadow-xl">
-                <div class="bg-white rounded-[calc(1.5rem-2px)] p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-                    <div class="flex items-center gap-4">
-                        <div class="w-16 h-16 bg-sbc-orange/10 rounded-full flex items-center justify-center text-sbc-orange">
-                            <i class="ph-fill ph-wrench text-3xl"></i>
-                        </div>
+            <!-- OFFRES MAINTENANCE -->
+            <div class="max-w-5xl mx-auto mb-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Pack 1: Sans Gaz -->
+                <div class="bg-white p-1 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition duration-300">
+                    <div class="bg-gray-50 rounded-[calc(1.5rem-2px)] p-8 h-full flex flex-col justify-between">
                         <div>
-                            <h3 class="font-display text-2xl font-bold">Pack Maintenance Climatisation</h3>
-                            <p class="text-gray-500 font-medium">Entretien complet + Complément Gaz</p>
+                            <div class="w-14 h-14 bg-sbc-black/10 rounded-full flex items-center justify-center text-sbc-black mb-4">
+                                <i class="ph-fill ph-wrench text-2xl"></i>
+                            </div>
+                            <h3 class="font-display text-xl font-bold mb-2">Pack Maintenance Simple</h3>
+                            <p class="text-gray-500 font-medium text-sm mb-6">Nettoyage complet et vérification système (Sans gaz)</p>
+                        </div>
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-6 mt-4">
+                             <div>
+                                <div class="text-3xl font-black text-sbc-black">10.000 <span class="text-sm">F</span></div>
+                             </div>
+                             <a href="https://wa.me/22670195701?text=Bonjour%20SBC%2C%20je%20souhaite%20r%C3%A9server%20une%20maintenance%20SIMPLE%20(10k)." target="_blank" class="bg-sbc-black text-white px-6 py-2 rounded-lg font-bold text-sm hover:bg-gray-800 transition">Choisir</a>
                         </div>
                     </div>
-                    <div class="text-center md:text-right">
-                        <div class="text-4xl font-black text-sbc-orange">15.000 <span class="text-lg">FCFA</span></div>
-                        <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest">Par climatiseur</p>
+                </div>
+
+                <!-- Pack 2: Avec Gaz -->
+                <div class="bg-gradient-to-r from-sbc-orange to-sbc-accent p-1 rounded-3xl shadow-xl transform md:-translate-y-4">
+                    <div class="bg-white rounded-[calc(1.5rem-2px)] p-8 h-full flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-sbc-orange text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase">Recommandé</div>
+                        <div>
+                            <div class="w-14 h-14 bg-sbc-orange/10 rounded-full flex items-center justify-center text-sbc-orange mb-4">
+                                <i class="ph-fill ph-snowflake text-2xl"></i>
+                            </div>
+                            <h3 class="font-display text-xl font-bold mb-2">Pack Maintenance + Gaz</h3>
+                            <p class="text-gray-500 font-medium text-sm mb-6">Entretien complet + Complément de Gaz inclus</p>
+                        </div>
+                        <div class="flex items-center justify-between border-t border-gray-100 pt-6 mt-4">
+                             <div>
+                                <div class="text-3xl font-black text-sbc-orange">15.000 <span class="text-sm">F</span></div>
+                             </div>
+                             <a href="https://wa.me/22670195701?text=Bonjour%20SBC%2C%20je%20souhaite%20r%C3%A9server%20une%20maintenance%20COMPLETE%20(15k)." target="_blank" class="bg-sbc-orange text-white px-6 py-2 rounded-lg font-bold text-sm hover:bg-sbc-black transition">Choisir</a>
+                        </div>
                     </div>
-                    <a href="https://wa.me/22670195701?text=Bonjour%20SBC%2C%20je%20souhaite%20r%C3%A9server%20une%20maintenance%20pour%20mes%20climatiseurs%20(Offre%2015k)." target="_blank" class="bg-sbc-black text-white px-8 py-3 rounded-xl font-bold hover:bg-sbc-orange transition duration-300">Réserver</a>
                 </div>
             </div>
 
@@ -347,7 +369,8 @@
                             <div><label class="block text-xs font-bold uppercase text-gray-400 mb-2">Nom Complet</label><input type="text" id="contact-name" class="w-full bg-sbc-grey p-4 rounded-xl border border-transparent focus:border-sbc-orange outline-none transition" required></div>
                             <div><label class="block text-xs font-bold uppercase text-gray-400 mb-2">Service</label>
                                 <select id="contact-service" class="w-full bg-sbc-grey p-4 rounded-xl border border-transparent focus:border-sbc-orange outline-none transition">
-                                    <option>Maintenance (Offre 15k)</option>
+                                    <option>Maintenance Simple (10k)</option>
+                                    <option>Maintenance Complète (15k)</option>
                                     <option>Climatisation (Neuf)</option>
                                     <option>Électricité</option>
                                     <option>Achat Pièces (Boutique)</option>
