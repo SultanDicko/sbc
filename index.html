@@ -137,6 +137,26 @@
                 <div class="w-24 h-1.5 bg-sbc-orange mx-auto rounded-full"></div>
             </div>
 
+            <!-- OFFRE MAINTENANCE SPECIALE -->
+            <div class="max-w-4xl mx-auto mb-16 bg-gradient-to-r from-sbc-orange to-sbc-accent p-1 rounded-3xl shadow-xl">
+                <div class="bg-white rounded-[calc(1.5rem-2px)] p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-sbc-orange/10 rounded-full flex items-center justify-center text-sbc-orange">
+                            <i class="ph-fill ph-wrench text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-2xl font-bold">Pack Maintenance Climatisation</h3>
+                            <p class="text-gray-500 font-medium">Entretien complet + Complément Gaz</p>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-right">
+                        <div class="text-4xl font-black text-sbc-orange">15.000 <span class="text-lg">FCFA</span></div>
+                        <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest">Par climatiseur</p>
+                    </div>
+                    <a href="https://wa.me/22670195701?text=Bonjour%20SBC%2C%20je%20souhaite%20r%C3%A9server%20une%20maintenance%20pour%20mes%20climatiseurs%20(Offre%2015k)." target="_blank" class="bg-sbc-black text-white px-8 py-3 rounded-xl font-bold hover:bg-sbc-orange transition duration-300">Réserver</a>
+                </div>
+            </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <div class="service-card bg-sbc-grey p-8 md:p-12 rounded-[40px] shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8">
                     <div class="icon-box w-20 h-20 bg-white rounded-2xl flex items-center justify-center text-sbc-orange shrink-0 shadow-inner">
@@ -172,93 +192,109 @@
     <!-- SECTION BOUTIQUE -->
     <section id="boutique" class="py-24 bg-sbc-grey">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 text-center md:text-left">
                 <div>
                     <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 uppercase">Boutique <span class="text-sbc-orange">SBC</span></h2>
-                    <p class="text-gray-500 max-w-xl">Pièces détachées d'origine et consommables de haute qualité pour vos équipements de froid et climatisation.</p>
+                    <p class="text-gray-500 max-w-xl">Équipements de climatisation Inverter et pièces détachées d'origine pour particuliers et professionnels.</p>
                 </div>
-                <a href="#contact" class="text-sbc-orange font-bold flex items-center gap-2 hover:underline">
-                    Liste complète sur demande <i class="ph ph-arrow-right"></i>
-                </a>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Produit 1 -->
+            <!-- CLIMATISEURS -->
+            <h3 class="font-display text-2xl font-bold mb-8 flex items-center gap-3"><i class="ph-fill ph-snowflake text-sbc-orange"></i> Climatiseurs Inverter</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+                <!-- LG -->
                 <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
-                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50">
-                        <img src="Gaz R 32.jpeg" alt="Gaz R32" class="w-full h-full object-cover">
+                    <div class="h-56 rounded-2xl overflow-hidden mb-6 bg-white flex items-center justify-center">
+                        <img src="LG dual inverter.jpeg" alt="Clim LG" class="max-h-full object-contain">
                     </div>
+                    <div class="bg-sbc-orange/10 text-sbc-orange text-[10px] font-bold px-3 py-1 rounded-full w-fit mb-3">LG DUAL INVERTER</div>
+                    <h3 class="font-display text-xl font-bold mb-4">LG Dual Inverter</h3>
+                    <div class="space-y-1 mb-6 text-sm text-gray-600">
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>1 CV</span> <span class="font-bold">300.000 F</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>1,5 CV</span> <span class="font-bold">315.000 F</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>2 CV</span> <span class="font-bold">410.000 F</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>3 CV</span> <span class="font-bold">500.000 F</span></div>
+                    </div>
+                    <p class="text-[11px] text-green-600 font-bold mb-4"><i class="ph-fill ph-gift"></i> Installation + 1ère maintenance offerte</p>
+                    <button onclick="orderClim('LG Dual Inverter')" class="mt-auto w-full bg-sbc-black text-white py-3 rounded-xl font-bold hover:bg-sbc-orange transition flex items-center justify-center gap-2">Commander</button>
+                </div>
+
+                <!-- SHARP -->
+                <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
+                    <div class="h-56 rounded-2xl overflow-hidden mb-6 bg-white flex items-center justify-center">
+                        <img src="Sharp inverter.jpeg" alt="Clim Sharp" class="max-h-full object-contain">
+                    </div>
+                    <div class="bg-sbc-orange/10 text-sbc-orange text-[10px] font-bold px-3 py-1 rounded-full w-fit mb-3">SHARP INVERTER</div>
+                    <h3 class="font-display text-xl font-bold mb-4">Sharp Inverter</h3>
+                    <div class="space-y-1 mb-6 text-sm text-gray-600">
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>1 CV</span> <span class="font-bold">265.000 F</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>1,5 CV</span> <span class="font-bold">300.000 F</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>2 CV</span> <span class="font-bold">385.000 F</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>3 CV</span> <span class="font-bold">465.000 F</span></div>
+                    </div>
+                    <p class="text-[11px] text-green-600 font-bold mb-4"><i class="ph-fill ph-gift"></i> Installation + 1ère maintenance offerte</p>
+                    <button onclick="orderClim('Sharp Inverter')" class="mt-auto w-full bg-sbc-black text-white py-3 rounded-xl font-bold hover:bg-sbc-orange transition flex items-center justify-center gap-2">Commander</button>
+                </div>
+
+                <!-- NASCO -->
+                <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
+                    <div class="h-56 rounded-2xl overflow-hidden mb-6 bg-white flex items-center justify-center">
+                        <img src="Nasco inverter.jpeg" alt="Clim Nasco" class="max-h-full object-contain">
+                    </div>
+                    <div class="bg-sbc-orange/10 text-sbc-orange text-[10px] font-bold px-3 py-1 rounded-full w-fit mb-3">NASCO INVERTER</div>
+                    <h3 class="font-display text-xl font-bold mb-4">Nasco Inverter</h3>
+                    <div class="space-y-1 mb-6 text-sm text-gray-600">
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>1 CV</span> <span class="font-bold">230.000 F</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>1,5 CV</span> <span class="font-bold">260.000 F</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>2 CV</span> <span class="font-bold">325.000 F</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>3 CV</span> <span class="font-bold">380.000 F</span></div>
+                    </div>
+                    <button onclick="orderClim('Nasco Inverter')" class="mt-auto w-full bg-sbc-black text-white py-3 rounded-xl font-bold hover:bg-sbc-orange transition flex items-center justify-center gap-2">Commander</button>
+                </div>
+
+                <!-- BOREAL -->
+                <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
+                    <div class="h-56 rounded-2xl overflow-hidden mb-6 bg-white flex items-center justify-center">
+                        <img src="Boréal inverter.jpeg" alt="Clim Boréal" class="max-h-full object-contain">
+                    </div>
+                    <div class="bg-sbc-orange/10 text-sbc-orange text-[10px] font-bold px-3 py-1 rounded-full w-fit mb-3">BOREAL INVERTER</div>
+                    <h3 class="font-display text-xl font-bold mb-4">Boréal Inverter</h3>
+                    <div class="space-y-1 mb-6 text-sm text-gray-600">
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>1 CV</span> <span class="font-bold">230.000 F</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>1,5 CV</span> <span class="font-bold">260.000 F</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>2 CV</span> <span class="font-bold">325.000 F</span></div>
+                        <div class="flex justify-between border-b border-gray-50 pb-1"><span>3 CV</span> <span class="font-bold">380.000 F</span></div>
+                    </div>
+                    <button onclick="orderClim('Boréal Inverter')" class="mt-auto w-full bg-sbc-black text-white py-3 rounded-xl font-bold hover:bg-sbc-orange transition flex items-center justify-center gap-2">Commander</button>
+                </div>
+            </div>
+
+            <!-- PIÈCES -->
+            <h3 class="font-display text-2xl font-bold mb-8 flex items-center gap-3"><i class="ph-fill ph-nut text-sbc-orange"></i> Pièces & Consommables</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
+                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50"><img src="Gaz R 32.jpeg" alt="Gaz R32" class="w-full h-full object-cover"></div>
                     <h3 class="font-display text-xl font-bold mb-2">Bouteille de Gaz R32</h3>
                     <p class="text-gray-500 text-sm mb-4 flex-grow">Réfrigérant haute performance écologique pour nouveaux systèmes de clim.</p>
-                    <button onclick="orderProduct('Gaz R32')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition flex items-center justify-center gap-2">
-                        Commander via WhatsApp
-                    </button>
+                    <button onclick="orderProduct('Gaz R32')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition">Commander</button>
                 </div>
-
-                <!-- Produit 2 -->
                 <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
-                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50">
-                        <img src="Gaz R 410.jpeg" alt="Gaz R410" class="w-full h-full object-cover">
-                    </div>
+                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50"><img src="Gaz R 410.jpeg" alt="Gaz R410" class="w-full h-full object-cover"></div>
                     <h3 class="font-display text-xl font-bold mb-2">Bouteille de Gaz R410A</h3>
                     <p class="text-gray-500 text-sm mb-4 flex-grow">Gaz réfrigérant standard pour climatiseurs résidentiels et tertiaires.</p>
-                    <button onclick="orderProduct('Gaz R410A')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition flex items-center justify-center gap-2">
-                        Commander via WhatsApp
-                    </button>
+                    <button onclick="orderProduct('Gaz R410A')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition">Commander</button>
                 </div>
-
-                <!-- Produit 3 -->
                 <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
-                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50">
-                        <img src="Compresseur.jpeg" alt="Compresseur" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-display text-xl font-bold mb-2">Compresseurs Rotatifs</h3>
-                    <p class="text-gray-500 text-sm mb-4 flex-grow">Pièces de rechange robustes pour unités extérieures toutes marques.</p>
-                    <button onclick="orderProduct('Compresseur')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition flex items-center justify-center gap-2">
-                        Commander via WhatsApp
-                    </button>
-                </div>
-
-                <!-- Produit 4 -->
-                <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
-                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50">
-                        <img src="Kit professionnel pour entretien de climatiseur.jpeg" alt="Kit Entretien" class="w-full h-full object-cover">
-                    </div>
+                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50"><img src="Kit professionnel pour entretien de climatiseur.jpeg" alt="Kit Entretien" class="w-full h-full object-cover"></div>
                     <h3 class="font-display text-xl font-bold mb-2">Kit d'Entretien Pro</h3>
                     <p class="text-gray-500 text-sm mb-4 flex-grow">Équipement complet pour le nettoyage des évaporateurs.</p>
-                    <button onclick="orderProduct('Kit Entretien')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition flex items-center justify-center gap-2">
-                        Commander via WhatsApp
-                    </button>
-                </div>
-
-                <!-- Produit 5 -->
-                <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
-                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50">
-                        <img src="Détergeant Wigam.jpeg" alt="Coil Cleaner" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-display text-xl font-bold mb-2">Nettoyant Wigam Coil-Cleaner</h3>
-                    <p class="text-gray-500 text-sm mb-4 flex-grow">Solution dégraissante professionnelle pour batteries et évaporateurs.</p>
-                    <button onclick="orderProduct('Détergeant Wigam')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition flex items-center justify-center gap-2">
-                        Commander via WhatsApp
-                    </button>
-                </div>
-
-                <!-- Produit 6 -->
-                <div class="product-card bg-white p-6 rounded-[30px] border border-gray-100 shadow-sm flex flex-col">
-                    <div class="h-64 rounded-2xl overflow-hidden mb-6 bg-gray-50">
-                        <img src="Capacitor.jpeg" alt="Capacitor" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-display text-xl font-bold mb-2">Condensateurs de Démarrage</h3>
-                    <p class="text-gray-500 text-sm mb-4 flex-grow">Condensateurs permanents CBB65 pour moteurs et compresseurs clim.</p>
-                    <button onclick="orderProduct('Condensateur')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition flex items-center justify-center gap-2">
-                        Commander via WhatsApp
-                    </button>
+                    <button onclick="orderProduct('Kit Entretien')" class="w-full bg-sbc-orange text-white py-3 rounded-xl font-bold hover:bg-sbc-black transition">Commander</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION CONTACT -->
+    <!-- CONTACT -->
     <section id="contact" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto bg-white rounded-[40px] shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-gray-100">
@@ -268,12 +304,12 @@
                         <p class="text-white/80 mb-12">Nos experts SBC sont disponibles pour toute installation, maintenance ou achat de pièces.</p>
                         <div class="space-y-8">
                             <div class="flex items-center gap-5">
-                                <a href="https://wa.me/22670195701" target="_blank" class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center shrink-0 hover:bg-white hover:text-sbc-orange transition duration-300"><i class="ph-fill ph-whatsapp-logo text-2xl"></i></a>
+                                <a href="https://wa.me/22670195701" target="_blank" class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-sbc-orange transition duration-300"><i class="ph-fill ph-whatsapp-logo text-2xl"></i></a>
                                 <div><p class="text-[10px] uppercase font-bold opacity-70">WhatsApp</p><p class="font-bold">+226 70 19 57 01</p></div>
                             </div>
                             <div class="flex items-center gap-5">
                                 <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center shrink-0"><i class="ph-fill ph-envelope text-2xl"></i></div>
-                                <div><p class="text-[10px] uppercase font-bold opacity-70">Email Pro</p><p class="font-bold">contact@sbc-expert.com</p></div>
+                                <div><p class="text-[10px] uppercase font-bold opacity-70">Email Pro</p><p class="font-bold text-sm">Sahelbusinessc@gmail.com</p></div>
                             </div>
                         </div>
                     </div>
@@ -282,17 +318,18 @@
                 <div class="lg:w-3/5 p-10 md:p-16">
                     <form onsubmit="event.preventDefault(); orderProduct('Demande de contact général');" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div><label class="block text-xs font-bold uppercase text-gray-400 mb-2">Nom Complet</label><input type="text" id="contact-name" class="w-full bg-sbc-grey p-4 rounded-xl border border-transparent focus:border-sbc-orange outline-none transition" required></div>
+                            <div><label class="block text-xs font-bold uppercase text-gray-400 mb-2">Nom</label><input type="text" id="contact-name" class="w-full bg-sbc-grey p-4 rounded-xl border border-transparent focus:border-sbc-orange outline-none transition" required></div>
                             <div><label class="block text-xs font-bold uppercase text-gray-400 mb-2">Service</label>
                                 <select id="contact-service" class="w-full bg-sbc-grey p-4 rounded-xl border border-transparent focus:border-sbc-orange outline-none transition">
-                                    <option>Climatisation</option>
+                                    <option>Maintenance (Offre 15k)</option>
+                                    <option>Climatisation (Neuf)</option>
                                     <option>Électricité</option>
                                     <option>Achat Pièces (Boutique)</option>
                                 </select>
                             </div>
                         </div>
-                        <div><label class="block text-xs font-bold uppercase text-gray-400 mb-2">Votre Message</label><textarea id="contact-message" rows="5" class="w-full bg-sbc-grey p-4 rounded-xl border border-transparent focus:border-sbc-orange outline-none transition" required></textarea></div>
-                        <button type="submit" class="w-full bg-sbc-black text-white py-5 rounded-xl font-bold text-lg uppercase tracking-widest hover:bg-sbc-orange transition shadow-xl">Envoyer sur WhatsApp</button>
+                        <div><label class="block text-xs font-bold uppercase text-gray-400 mb-2">Message</label><textarea id="contact-message" rows="5" class="w-full bg-sbc-grey p-4 rounded-xl border border-transparent focus:border-sbc-orange outline-none transition" required></textarea></div>
+                        <button type="submit" class="w-full bg-sbc-black text-white py-5 rounded-xl font-bold text-lg uppercase hover:bg-sbc-orange transition shadow-xl">Envoyer sur WhatsApp</button>
                     </form>
                 </div>
             </div>
@@ -302,16 +339,18 @@
     <!-- FOOTER -->
     <footer class="bg-sbc-black text-white py-16">
         <div class="container mx-auto px-6 text-center">
-            <img src="logo.jpeg" onerror="this.src='https://placehold.co/100x100/E65100/white?text=SBC'" alt="SBC" class="h-16 mx-auto mb-8 grayscale invert brightness-0">
+            <!-- LOGO ICI AU LIEU DU CARRE BLANC -->
+            <img src="logo.jpeg" onerror="this.src='https://placehold.co/120x120/E65100/white?text=SBC'" alt="Logo SBC Footer" class="h-24 mx-auto mb-8 border-2 border-white/10 rounded-xl p-1">
+            
             <p class="text-gray-500 text-sm max-w-lg mx-auto mb-10 italic tracking-wide">
                 Sahel Business Center (SBC) - Spécialiste du froid, de la climatisation et de l’électricité au Burkina Faso.
             </p>
             <div class="flex flex-wrap justify-center gap-8 mb-12 text-gray-400 font-bold uppercase text-xs tracking-widest">
-                <a href="#accueil" class="hover:text-white transition">Accueil</a>
-                <a href="#propos" class="hover:text-white transition">À Propos</a>
-                <a href="#services" class="hover:text-white transition">Services</a>
+                <a href="#accueil" class="hover:text-white">Accueil</a>
+                <a href="#propos" class="hover:text-white">À Propos</a>
+                <a href="#services" class="hover:text-white">Services</a>
                 <a href="#boutique" class="hover:text-white text-sbc-orange">Boutique</a>
-                <a href="#contact" class="hover:text-white transition">Contact</a>
+                <a href="#contact" class="hover:text-white">Contact</a>
             </div>
             <div class="border-t border-white/5 pt-10 text-[10px] text-gray-600 uppercase tracking-[0.3em]">
                 &copy; 2026 Sahel Business Center. Tous droits réservés.
@@ -334,11 +373,15 @@
             });
         });
 
-        // Fonction pour commander un produit ou contacter via WhatsApp
+        function orderClim(climName) {
+            const phoneNumber = "22670195701";
+            const message = `Bonjour SBC, je souhaite commander un climatiseur ${climName}.\n\nQuelle puissance souhaitez-vous ? (1 CV / 1.5 CV / 2 CV / 3 CV)`;
+            window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
         function orderProduct(subject) {
             const phoneNumber = "22670195701"; 
             let message = "";
-            
             if (subject === 'Demande de contact général') {
                 const name = document.getElementById('contact-name').value;
                 const service = document.getElementById('contact-service').value;
@@ -347,7 +390,6 @@
             } else {
                 message = `Bonjour SBC, je suis intéressé par : ${subject}. Pouvez-vous me donner plus d'informations ?`;
             }
-            
             window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
         }
     </script>
